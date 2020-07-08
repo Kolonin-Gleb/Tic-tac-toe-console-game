@@ -13,23 +13,27 @@ void startGame(char playerChip)
 
 	char whoseTurn;
 
-	while (true)
+	while (isWinnerDetected(board) == 'N')
 	{
 		if (playerChip == 'X')
 		{
 			position = enterCell(board);
 			board[position] = 'X';
+			isWinnerDetected(board);
 
 			position = pcCell(board);
 			board[position] = 'O';
+			isWinnerDetected(board);
 		}
 		else
 		{
 			position = pcCell(board);
 			board[position] = 'X';
+			isWinnerDetected(board);
 
 			position = enterCell(board);
 			board[position] = 'O';
+			isWinnerDetected(board);
 		}
 	}
 

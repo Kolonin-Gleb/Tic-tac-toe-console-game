@@ -63,4 +63,46 @@ short pcCell(const vector<char>& board)
 	return cell;
 }
 
+char isWinnerDetected(const vector<char>& board)
+{
+	// по горизонтали
+	if (board[0] == board[1] == board[2])
+	{
+		return board[0];
+	}
+	else if (board[3] == board[4] == board[5])
+	{
+		return board[3];
+	}
+	else if (board[6] == board[7] == board[8])
+	{
+		return board[6];
+	}
+	// по вертикали
+	else if (board[0] == board[3] == board[6])
+	{
+		return board[0];
+	}
+	else if (board[1] == board[4] == board[7])
+	{
+		return board[1];
+	}
+	else if (board[2] == board[5] == board[8])
+	{
+		return board[2];
+	}
+	// по диагонали
+	else if (board[0] == board[4] == board[8])
+	{
+		return board[0];
+	}
+	else if (board[6] == board[4] == board[2])
+	{
+		return board[6];
+	}
+	else
+	{
+		return 'N';
+	}
+}
 
