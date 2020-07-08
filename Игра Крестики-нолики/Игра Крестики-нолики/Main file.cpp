@@ -5,6 +5,7 @@
 #include <Windows.h>
 
 #include "Preparatory functions.h"
+#include "Start game function.h"
 
 using namespace std;
 

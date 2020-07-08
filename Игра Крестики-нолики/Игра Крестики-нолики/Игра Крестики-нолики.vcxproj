@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="Main file.cpp" />
     <ClCompile Include="Preparatory functions.cpp" />
+    <ClCompile Include="Start game function.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Preparatory functions.h" />
+    <ClInclude Include="Start game function.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Игровые функции">
+      <UniqueIdentifier>{cba5ed76-affe-4fdc-ad73-fe97cff732ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main file.cpp">
@@ -21,10 +24,16 @@
     <ClCompile Include="Preparatory functions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Start game function.cpp">
+      <Filter>Игровые функции</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Preparatory functions.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Start game function.h">
+      <Filter>Игровые функции</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
