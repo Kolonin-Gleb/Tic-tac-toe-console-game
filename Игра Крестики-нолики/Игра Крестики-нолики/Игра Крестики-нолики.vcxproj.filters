@@ -16,6 +16,12 @@
     <Filter Include="Игровые функции">
       <UniqueIdentifier>{cba5ed76-affe-4fdc-ad73-fe97cff732ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Игровые функции\Файлы заголовков">
+      <UniqueIdentifier>{ec95378c-e902-42be-8022-43003304684f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Игровые функции\Исходные файлы">
+      <UniqueIdentifier>{26f65624-0039-45a5-b506-4950fdae9203}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main file.cpp">
@@ -24,8 +30,11 @@
     <ClCompile Include="Preparatory functions.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Game functions.cpp">
+      <Filter>Игровые функции\Исходные файлы</Filter>
+    </ClCompile>
     <ClCompile Include="Start game function.cpp">
-      <Filter>Игровые функции</Filter>
+      <Filter>Игровые функции\Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -33,7 +42,10 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Start game function.h">
-      <Filter>Игровые функции</Filter>
+      <Filter>Игровые функции\Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Game functions.h">
+      <Filter>Игровые функции\Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
