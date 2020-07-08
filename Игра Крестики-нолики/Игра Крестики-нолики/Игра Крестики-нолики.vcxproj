@@ -140,11 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game functions.cpp" />
     <ClCompile Include="Main file.cpp" />
     <ClCompile Include="Preparatory functions.cpp" />
+    <ClCompile Include="Start game function.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game functions.h" />
     <ClInclude Include="Preparatory functions.h" />
+    <ClInclude Include="Start game function.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
