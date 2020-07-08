@@ -11,7 +11,7 @@ void showBoard(const vector<char>& board)
 
 short enterCell(const vector<char>& board)
 {
-	int cell;
+	short cell;
 
 	while (true)
 	{
@@ -48,4 +48,17 @@ short enterCell(const vector<char>& board)
 			}
 		}
 	}
+}
+
+short pcCell(const vector<char>& board)
+{
+	srand(time(0));
+	short cell = 9;
+
+	do
+	{
+		cell = rand() % 9; // 0 - 8
+	} while (find(board.begin(), board.end(), cell + '0') == board.end());
+	
+	return cell;
 }

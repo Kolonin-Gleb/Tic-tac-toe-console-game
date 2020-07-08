@@ -11,6 +11,8 @@ void startGame(char playerChip)
 
 	char position;
 
+	char whoseTurn = playerChip;
+
 	while (true)
 	{
 		if (playerChip == 'X')
@@ -18,9 +20,10 @@ void startGame(char playerChip)
 			position = enterCell(board);
 			board[position] = 'X';
 		}
-		else
+		if (whoseTurn == 'O')
 		{
-
+			position = pcCell(board);
+			board[position] = 'O';
 		}
 	}
 
