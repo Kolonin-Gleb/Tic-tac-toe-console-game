@@ -8,6 +8,8 @@ using namespace std;
 
 int main()
 {
+	system("title Игра Крестики-нолики");
+	system("color a");
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
