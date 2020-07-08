@@ -10,33 +10,33 @@ void startGame(char playerChip)
 	};
 
 	char position;
-
 	char whoseTurn;
+	char matchResult = 'N';
 
-	while (isWinnerDetected(board) == 'N')
+
+	while (matchResult == 'N')
 	{
 		if (playerChip == 'X')
 		{
 			position = enterCell(board);
 			board[position] = 'X';
-			isWinnerDetected(board);
+			matchResult = isWinnerDetected(board);
 
 			position = pcCell(board);
 			board[position] = 'O';
-			isWinnerDetected(board);
+			matchResult = isWinnerDetected(board);
 		}
 		else
 		{
 			position = pcCell(board);
 			board[position] = 'X';
-			isWinnerDetected(board);
+			matchResult = isWinnerDetected(board);
 
 			position = enterCell(board);
 			board[position] = 'O';
-			isWinnerDetected(board);
+			matchResult = isWinnerDetected(board);
 		}
 	}
 
+	gameOver(matchResult, playerChip);
 }
-
-
