@@ -1,8 +1,29 @@
 #include "Preparatory functions.h"
 
+short Question1or2(string question)
+{
+	short answer = 0;
+	while (true)
+	{
+		cout << question << endl;
+		cin >> answer;
+		if (answer == 1 || answer == 2)
+		{
+			system("cls");
+			return answer;
+		}
+		else
+		{
+			cin.clear();
+			cin.ignore(100500, '\n');
+			system("cls");
+			cout << "Ваш ввод некорректен!" << endl;
+		}
+	}
+}
+
 void showGameRules()
 {
-	system("cls");
 	cout << "\t\tПравила игры:" << endl;
 
 	cout << "    Как происходят ходы:" << endl;
@@ -21,31 +42,5 @@ void showGameRules()
 
 	cout << "Удачи и приятной игры!" << endl;
 	system("pause");
+	system("cls");
 }
-
-short enterAction()
-{
-	short action = 0;
-	while (true)
-	{
-		cout << "Введите 1, чтобы ознакомится с правилами." << endl;
-		cout << "Введите 2, чтобы начать игру." << endl;
-		cin >> action;
-		if (action == 1 || action == 2)
-		{
-			return action;
-		}
-		else
-		{
-			cin.clear();
-			cin.ignore(100500, '\n');
-			system("cls");
-			cout << "Ваш ввод некорректен!" << endl;
-		}
-	}
-}
-
-//char choosePlayerChip()
-//{
-//	
-//}
