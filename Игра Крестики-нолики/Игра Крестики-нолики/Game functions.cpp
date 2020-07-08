@@ -9,4 +9,113 @@ void showBoard(const vector<char>& board)
 	cout << "\t" << board[6] << " | " << board[7] << " | " << board[8] << endl;
 }
 
+short enterCell(const vector<char>& board)
+{
+	short cell;
 
+	while (true)
+	{
+		showBoard(board);
+		cout << "Ваш ход!" << endl;
+		cout << "Введите номер ячейки свободного игрового поля: ";
+		cin >> cell;
+
+		if (!cin)
+		{
+			cin.clear();
+			cin.ignore(100500, '\n');
+			system("cls");
+			cout << "Номер ячейки введён некорректно!" << endl;
+		}
+		else if (cell > 8 || cell < 0)
+		{
+			system("cls");
+			cout << "Номер ячейки слишком велик!" << endl;
+			cout << "Ячейки под данным номером нет на игровом поле!" << endl;
+		}
+		else
+		{
+			// cell + '0' - Преобразование числа в символ
+			if (find(board.begin(), board.end(), cell + '0') == board.end())
+			{
+				system("cls");
+				cout << "Данная ячейка занята!" << endl;
+			}
+			else
+			{
+				system("cls");
+				return cell;
+			}
+		}
+	}
+}
+
+short pcCell(const vector<char>& board)
+{
+	srand(time(0));
+	short cell = 9;
+
+	do
+	{
+		cell = rand() % 9; // 0 - 8
+	} while (find(board.begin(), board.end(), cell + '0') == board.end());
+	
+	return cell;
+}
+
+char isWinnerDetected(const vector<char>& board)
+{
+	// по горизонтали
+	if (board[0] == board[1] && board[1] == board[2])
+	{
+		return board[0];
+	}
+	else if (board[3] == board[4] && board[4] == board[5])
+	{
+		return board[3];
+	}
+	else if (board[6] == board[7] && board[7] == board[8])
+	{
+		return board[6];
+	}
+	// по вертикали
+	else if (board[0] == board[3] && board[3] == board[6])
+	{
+		return board[0];
+	}
+	else if (board[1] == board[4] && board[4] == board[7])
+	{
+		return board[1];
+	}
+	else if (board[2] == board[5] && board[5] == board[8])
+	{
+		return board[2];
+	}
+	// по диагонали
+	else if (board[0] == board[4] && board[4] == board[8])
+	{
+		return board[0];
+	}
+	else if (board[6] == board[4] && board[4] == board[2])
+	{
+		return board[6];
+	}
+	else
+	{
+		return 'N';
+	}
+}
+
+void gameOver(char matchResult, char playerChip)
+{
+	if (playerChip == matchResult)
+	{
+		cout << "Поздравляем! Вы победили!" << endl;
+	}
+	else
+	{
+		cout << "К сожалению вы проиграли!" << endl;
+		cout << "В следующий раз повезёт!" << endl;
+	}
+
+}

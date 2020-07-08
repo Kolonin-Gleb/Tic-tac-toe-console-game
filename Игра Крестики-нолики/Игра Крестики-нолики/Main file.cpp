@@ -46,8 +46,6 @@ int main()
 	startGame(playerChip);
 
 
-
-
 	system("pause");
 	return 0;
 }
