@@ -4,8 +4,7 @@
 
 using namespace std;
 
+short Question1or2(string question);
+
 void showGameRules();
 
-short enterAction();
-
-char choosePlayerChip();

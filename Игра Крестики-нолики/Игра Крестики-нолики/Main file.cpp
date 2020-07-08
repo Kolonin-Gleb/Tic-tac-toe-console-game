@@ -20,12 +20,28 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	short gameAction = enterAction();
+	string checkRulesQuestion = "Введите 1, чтобы ознакомится с правилами.\nВведите 2, чтобы начать игру.";
+
+	short gameAction = Question1or2(checkRulesQuestion);
 
 	if (gameAction == CHECK_RULES)
 	{
 		showGameRules();
 	}
+
+	string playerChipQuestion = "Введите 1, чтобы ходить первым.\nВведите 2, чтобы ходить вторым.";
+
+	if (Question1or2(playerChipQuestion) == 1)
+	{
+		char playerChip = 'X';
+	}
+	else
+	{
+		char playerChip = 'O';
+	}
+
+
+
 
 
 	system("pause");
