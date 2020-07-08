@@ -9,4 +9,13 @@ void showBoard(const vector<char>& board)
 	cout << "\t" << board[6] << " | " << board[7] << " | " << board[8] << endl;
 }
 
+void makeTurn(vector<char>& board, char playerturn)
+{
+
+}
+
+char enterTurn(const vector<char>& board)
+{
+
+}
 
