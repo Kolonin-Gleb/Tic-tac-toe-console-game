@@ -62,3 +62,5 @@ short pcCell(const vector<char>& board)
 	
 	return cell;
 }
+
+
