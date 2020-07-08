@@ -30,17 +30,20 @@ int main()
 		showGameRules();
 	}
 
+	char playerChip;
+
 	string playerChipQuestion = "Введите 1, чтобы ходить первым.\nВведите 2, чтобы ходить вторым.";
 
 	if (Question1or2(playerChipQuestion) == 1)
 	{
-		char playerChip = 'X';
+		playerChip = 'X';
 	}
 	else
 	{
-		char playerChip = 'O';
+		playerChip = 'O';
 	}
 
+	startGame(playerChip);
 
 
 
