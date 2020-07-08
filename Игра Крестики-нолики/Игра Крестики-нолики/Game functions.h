@@ -7,6 +7,4 @@ using namespace std;
 
 void showBoard(const vector<char>& board);
 
-char makeTurn(vector<char>& board, char playerTurn);
-
-char enterTurn(const vector<char>& board);
+short enterCell(const vector<char>& board);

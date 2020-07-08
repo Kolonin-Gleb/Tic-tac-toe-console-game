@@ -9,15 +9,9 @@ void showBoard(const vector<char>& board)
 	cout << "\t" << board[6] << " | " << board[7] << " | " << board[8] << endl;
 }
 
-//char makeTurn(vector<char>& board, char playerTurn)
-//{
-//	
-//}
-
-char enterTurn(const vector<char>& board)
+short enterCell(const vector<char>& board)
 {
 	int cell;
-	char turn;
 
 	while (true)
 	{
@@ -41,8 +35,8 @@ char enterTurn(const vector<char>& board)
 		}
 		else
 		{
-			turn = cell + '0'; // Преобразуем число в символ
-			if (find(board.begin(), board.end(), turn) == board.end())
+			// cell + '0' - Преобразование числа в символ
+			if (find(board.begin(), board.end(), cell + '0') == board.end())
 			{
 				system("cls");
 				cout << "Данная ячейка занята!" << endl;
@@ -50,7 +44,7 @@ char enterTurn(const vector<char>& board)
 			else
 			{
 				system("cls");
-				return turn;
+				return cell;
 			}
 		}
 	}

@@ -9,9 +9,16 @@ void startGame(char playerChip)
 		'6', '7', '8'
 	};
 
+	char position;
+
 	while (true)
 	{
 		if (playerChip == 'X')
+		{
+			position = enterCell(board);
+			board[position] = 'X';
+		}
+		else
 		{
 
 		}
