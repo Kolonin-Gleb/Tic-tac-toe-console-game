@@ -9,9 +9,16 @@ void startGame(char playerChip)
 		'6', '7', '8'
 	};
 
-	showBoard(board);
+	while (true)
+	{
+		if (playerChip == 'X')
+		{
+
+		}
+	}
 
 
+	
 
 
 }
