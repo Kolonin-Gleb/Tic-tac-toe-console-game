@@ -9,7 +9,7 @@ void startGame(char playerChip)
 		'7', '8', '9'
 	};
 
-
+	showBoard(board);
 
 
 }
