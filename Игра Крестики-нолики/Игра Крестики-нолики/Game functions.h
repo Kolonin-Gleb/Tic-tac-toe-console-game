@@ -11,6 +11,8 @@ short enterCell(const vector<char>& board);
 
 short pcCell(const vector<char>& board);
 
-char isWinnerDetected(const vector<char>& board);
+char passMove(char whoseMove);
+
+char whoWon(const vector<char>& board);
 
 void gameOver(char matchResult, char playerChip);

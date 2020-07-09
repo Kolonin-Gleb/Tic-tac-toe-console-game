@@ -1,6 +1,6 @@
 #include "Preparatory functions.h"
 
-short Question1or2(string question)
+short Ask1or2(string question)
 {
 	short answer = 0;
 	while (true)

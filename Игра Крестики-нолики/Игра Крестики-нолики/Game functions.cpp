@@ -63,7 +63,19 @@ short pcCell(const vector<char>& board)
 	return cell;
 }
 
-char isWinnerDetected(const vector<char>& board)
+char passMove(char whoseMove)
+{
+	if (whoseMove == 'X')
+	{
+		return 'O';
+	}
+	else
+	{
+		return 'X';
+	}
+}
+
+char whoWon(const vector<char>& board)
 {
 	// по горизонтали
 	if (board[0] == board[1] && board[1] == board[2])

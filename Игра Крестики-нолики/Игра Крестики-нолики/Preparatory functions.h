@@ -4,7 +4,7 @@
 
 using namespace std;
 
-short Question1or2(string question);
+short Ask1or2(string question);
 
 void showGameRules();
 
