@@ -9,34 +9,61 @@ void startGame(char playerChip)
 		'6', '7', '8'
 	};
 
-	char position;
-	char whoseTurn;
+	char whoseMove = 'X';
 	char matchResult = 'N';
+	short movesCount = 0;
+	char position;
 
-
-	while (matchResult == 'N')
+	while (true)
 	{
-		if (playerChip == 'X')
+		if (playerChip == whoseMove)
 		{
 			position = enterCell(board);
-			board[position] = 'X';
-			matchResult = isWinnerDetected(board);
+			board[position] = playerChip;
+			++movesCount;
+			whoseMove = passMove(whoseMove);
 
-			position = pcCell(board);
-			board[position] = 'O';
-			matchResult = isWinnerDetected(board);
+			if (movesCount >= 3)
+			{
+				if (matchResult != whoWon(board))
+				{
+					break;
+				}
+			}
+			if (movesCount == 9)
+			{
+				break;
+			}
 		}
 		else
 		{
 			position = pcCell(board);
-			board[position] = 'X';
-			matchResult = isWinnerDetected(board);
+			board[position] = whoseMove;
+			++movesCount;
+			whoseMove = passMove(whoseMove);
 
-			position = enterCell(board);
-			board[position] = 'O';
-			matchResult = isWinnerDetected(board);
+			if (movesCount >= 3)
+			{
+				if (matchResult != whoWon(board))
+				{
+					break;
+				}
+			}
+
+			if (movesCount == 9)
+			{
+				break;
+			}
 		}
 	}
 
-	gameOver(matchResult, playerChip);
+	if (matchResult != whoWon(board))
+	{
+		matchResult = whoWon(board);
+		gameOver(matchResult, playerChip);
+	}
+	else
+	{
+		cout << "Ничья!" << endl;
+	}
 }

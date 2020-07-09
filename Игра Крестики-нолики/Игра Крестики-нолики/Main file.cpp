@@ -23,7 +23,7 @@ int main()
 
 	string checkRulesQuestion = "Введите 1, чтобы ознакомится с правилами.\nВведите 2, чтобы начать игру.";
 
-	short gameAction = Question1or2(checkRulesQuestion);
+	short gameAction = Ask1or2(checkRulesQuestion);
 
 	if (gameAction == CHECK_RULES)
 	{
@@ -34,7 +34,7 @@ int main()
 
 	string playerChipQuestion = "Введите 1, чтобы ходить первым.\nВведите 2, чтобы ходить вторым.";
 
-	if (Question1or2(playerChipQuestion) == 1)
+	if (Ask1or2(playerChipQuestion) == 1)
 	{
 		playerChip = 'X';
 	}
